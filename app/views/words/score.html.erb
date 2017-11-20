@@ -1,0 +1,24 @@
+<h1>Words#score</h1>
+
+<p><%= @result[:message] %> </p>
+
+<p>Your Score: <%= @result[:score] %> </p>
+
+<p>Time: <%= @result[:time] %> seconds</p>
+
+<p><%= link_to "Play Again", "/game" %></p>
+
+<h2>Your stats: </h2>
+<p> Number of games: <strong> <%= @nb_games %> </strong></p>
+<p>Average Score: <strong> <%= @average_score %> </strong></p>
+<p>Average Time: <strong> <%= @average_time %> </strong></p>
+
+
+
+
+
+<ol>
+<% session[:tries].each do |v| %>
+  <li><%= v[0]["score"] %></li>
+<% end %>
+</ol>
