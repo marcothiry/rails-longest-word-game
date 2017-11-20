@@ -29,8 +29,8 @@ class WordsController < ApplicationController
       @sum_score += try[0]["score"]
       @sum_time += try[0]["time"]
     }
-    @average_score = (@sum_score / @nb_games)
-    @average_time = (@sum_time / @nb_games)
+    @average_score = (@sum_score / (1*@nb_games))
+    @average_time = (@sum_time / (1*@nb_games))
 
 
   end
